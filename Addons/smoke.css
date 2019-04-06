@@ -1,0 +1,691 @@
+.h {
+  text-align: center;
+  width: 90%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  right: 20%;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%) scale(1.2);
+  filter: blur(40px);
+  opacity: 0.5;
+}
+
+.h .c {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 400px;
+  position: absolute;
+  margin: auto;
+}
+.h .c:nth-of-type(1) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 5px;
+  height: 5px;
+  right: 10px;
+  bottom: 10px;
+  -webkit-filter: blur(8.3333333333px);
+  transform-origin: 4px 2px;
+  animation: spin 2s 0.1s linear infinite;
+  background: rgba(207, 207, 207, 0.988);
+}
+.h .c:nth-of-type(2) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 10px;
+  height: 10px;
+  right: 20px;
+  bottom: 20px;
+  -webkit-filter: blur(8.6666666667px);
+  transform-origin: 8px 4px;
+  animation: spin 2s 0.2s linear infinite;
+  background: rgba(214, 214, 214, 0.975);
+}
+.h .c:nth-of-type(3) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 15px;
+  height: 15px;
+  right: 30px;
+  bottom: 30px;
+  -webkit-filter: blur(9px);
+  transform-origin: 12px 6px;
+  animation: spin 2s 0.3s linear infinite;
+  background: rgba(211, 210, 211, 0.963);
+}
+.h .c:nth-of-type(4) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 20px;
+  height: 20px;
+  right: 40px;
+  bottom: 40px;
+  -webkit-filter: blur(9.3333333333px);
+  transform-origin: 16px 8px;
+  animation: spin 2s 0.4s linear infinite;
+  background: rgba(212, 212, 212, 0.95);
+}
+.h .c:nth-of-type(5) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 25px;
+  height: 25px;
+  right: 50px;
+  bottom: 50px;
+  -webkit-filter: blur(9.6666666667px);
+  transform-origin: 20px 10px;
+  animation: spin 2s 0.5s linear infinite;
+  background: rgba(209, 209, 209, 0.938);
+}
+.h .c:nth-of-type(6) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 30px;
+  height: 30px;
+  right: 60px;
+  bottom: 60px;
+  -webkit-filter: blur(10px);
+  transform-origin: 24px 12px;
+  animation: spin 2s 0.6s linear infinite;
+  background: rgba(211, 210, 211, 0.925);
+}
+.h .c:nth-of-type(7) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 35px;
+  height: 35px;
+  right: 70px;
+  bottom: 70px;
+  -webkit-filter: blur(10.3333333333px);
+  transform-origin: 28px 14px;
+  animation: spin 2s 0.7s linear infinite;
+  background: rgba(215, 214, 216, 0.913);
+}
+.h .c:nth-of-type(8) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 40px;
+  height: 40px;
+  right: 80px;
+  bottom: 80px;
+  -webkit-filter: blur(10.6666666667px);
+  transform-origin: 32px 16px;
+  animation: spin 2s 0.8s linear infinite;
+  background: rgba(217, 217, 218, 0.9);
+}
+.h .c:nth-of-type(9) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 45px;
+  height: 45px;
+  right: 90px;
+  bottom: 90px;
+  -webkit-filter: blur(11px);
+  transform-origin: 36px 18px;
+  animation: spin 2s 0.9s linear infinite;
+  background: rgba(202, 201, 204, 0.888);
+}
+.h .c:nth-of-type(10) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 50px;
+  height: 50px;
+  right: 100px;
+  bottom: 100px;
+  -webkit-filter: blur(11.3333333333px);
+  transform-origin: 40px 20px;
+  animation: spin 2s 1s linear infinite;
+  background: rgba(212, 212, 212, 0.875);
+}
+.h .c:nth-of-type(11) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 55px;
+  height: 55px;
+  right: 110px;
+  bottom: 110px;
+  -webkit-filter: blur(11.6666666667px);
+  transform-origin: 44px 22px;
+  animation: spin 2s 1.1s linear infinite;
+  background: rgba(211, 211, 211, 0.863);
+}
+.h .c:nth-of-type(12) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 60px;
+  height: 60px;
+  right: 120px;
+  bottom: 120px;
+  -webkit-filter: blur(12px);
+  transform-origin: 48px 24px;
+  animation: spin 2s 1.2s linear infinite;
+  background: rgba(210, 210, 211, 0.85);
+}
+.h .c:nth-of-type(13) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 65px;
+  height: 65px;
+  right: 130px;
+  bottom: 130px;
+  -webkit-filter: blur(12.3333333333px);
+  transform-origin: 52px 26px;
+  animation: spin 2s 1.3s linear infinite;
+  background: rgba(206, 206, 206, 0.838);
+}
+.h .c:nth-of-type(14) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 70px;
+  height: 70px;
+  right: 140px;
+  bottom: 140px;
+  -webkit-filter: blur(12.6666666667px);
+  transform-origin: 56px 28px;
+  animation: spin 2s 1.4s linear infinite;
+  background: rgba(211, 209, 212, 0.825);
+}
+.h .c:nth-of-type(15) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 75px;
+  height: 75px;
+  right: 150px;
+  bottom: 150px;
+  -webkit-filter: blur(13px);
+  transform-origin: 60px 30px;
+  animation: spin 2s 1.5s linear infinite;
+  background: rgba(214, 214, 214, 0.813);
+}
+.h .c:nth-of-type(16) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 80px;
+  height: 80px;
+  right: 160px;
+  bottom: 160px;
+  -webkit-filter: blur(13.3333333333px);
+  transform-origin: 64px 32px;
+  animation: spin 2s 1.6s linear infinite;
+  background: rgba(206, 206, 206, 0.8);
+}
+.h .c:nth-of-type(17) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 85px;
+  height: 85px;
+  right: 170px;
+  bottom: 170px;
+  -webkit-filter: blur(13.6666666667px);
+  transform-origin: 68px 34px;
+  animation: spin 2s 1.7s linear infinite;
+  background: rgba(219, 219, 219, 0.788);
+}
+.h .c:nth-of-type(18) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 90px;
+  height: 90px;
+  right: 180px;
+  bottom: 180px;
+  -webkit-filter: blur(14px);
+  transform-origin: 72px 36px;
+  animation: spin 2s 1.8s linear infinite;
+  background: rgba(209, 209, 209, 0.775);
+}
+.h .c:nth-of-type(19) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 95px;
+  height: 95px;
+  right: 190px;
+  bottom: 190px;
+  -webkit-filter: blur(14.3333333333px);
+  transform-origin: 76px 38px;
+  animation: spin 2s 1.9s linear infinite;
+  background: rgba(204, 204, 204, 0.763);
+}
+.h .c:nth-of-type(20) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 100px;
+  height: 100px;
+  right: 200px;
+  bottom: 200px;
+  -webkit-filter: blur(14.6666666667px);
+  transform-origin: 80px 40px;
+  animation: spin 2s 2s linear infinite;
+  background: rgba(204, 204, 204, 0.75);
+}
+.h .c:nth-of-type(21) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 105px;
+  height: 105px;
+  right: 210px;
+  bottom: 210px;
+  -webkit-filter: blur(15px);
+  transform-origin: 84px 42px;
+  animation: spin 2s 2.1s linear infinite;
+  background: rgba(207, 207, 207, 0.738);
+}
+.h .c:nth-of-type(22) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 110px;
+  height: 110px;
+  right: 220px;
+  bottom: 220px;
+  -webkit-filter: blur(15.3333333333px);
+  transform-origin: 88px 44px;
+  animation: spin 2s 2.2s linear infinite;
+  background: rgba(209, 209, 209, 0.725);
+}
+.h .c:nth-of-type(23) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 115px;
+  height: 115px;
+  right: 230px;
+  bottom: 230px;
+  -webkit-filter: blur(15.6666666667px);
+  transform-origin: 92px 46px;
+  animation: spin 2s 2.3s linear infinite;
+  background: rgba(206, 206, 206, 0.713);
+}
+.h .c:nth-of-type(24) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 120px;
+  height: 120px;
+  right: 240px;
+  bottom: 240px;
+  -webkit-filter: blur(16px);
+  transform-origin: 96px 48px;
+  animation: spin 2s 2.4s linear infinite;
+  background: rgba(206, 206, 206, 0.7);
+}
+.h .c:nth-of-type(25) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 125px;
+  height: 125px;
+  right: 250px;
+  bottom: 250px;
+  -webkit-filter: blur(16.3333333333px);
+  transform-origin: 100px 50px;
+  animation: spin 2s 2.5s linear infinite;
+  background: rgba(197, 197, 197, 0.688);
+}
+.h .c:nth-of-type(26) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 130px;
+  height: 130px;
+  right: 260px;
+  bottom: 260px;
+  -webkit-filter: blur(16.6666666667px);
+  transform-origin: 104px 52px;
+  animation: spin 2s 2.6s linear infinite;
+  background: rgba(207, 207, 207, 0.675);
+}
+.h .c:nth-of-type(27) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 135px;
+  height: 135px;
+  right: 270px;
+  bottom: 270px;
+  -webkit-filter: blur(17px);
+  transform-origin: 108px 54px;
+  animation: spin 2s 2.7s linear infinite;
+  background: rgba(190, 190, 190, 0.663);
+}
+.h .c:nth-of-type(28) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 140px;
+  height: 140px;
+  right: 280px;
+  bottom: 280px;
+  -webkit-filter: blur(17.3333333333px);
+  transform-origin: 112px 56px;
+  animation: spin 2s 2.8s linear infinite;
+  background: rgba(201, 201, 201, 0.65);
+}
+.h .c:nth-of-type(29) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 145px;
+  height: 145px;
+  right: 290px;
+  bottom: 290px;
+  -webkit-filter: blur(17.6666666667px);
+  transform-origin: 116px 58px;
+  animation: spin 2s 2.9s linear infinite;
+  background: rgba(204, 204, 204, 0.638);
+}
+.h .c:nth-of-type(30) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 150px;
+  height: 150px;
+  right: 300px;
+  bottom: 300px;
+  -webkit-filter: blur(18px);
+  transform-origin: 120px 60px;
+  animation: spin 2s 3s linear infinite;
+  background: rgba(207, 207, 207, 0.625);
+}
+.h .c:nth-of-type(31) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 155px;
+  height: 155px;
+  right: 310px;
+  bottom: 310px;
+  -webkit-filter: blur(18.3333333333px);
+  transform-origin: 124px 62px;
+  animation: spin 2s 3.1s linear infinite;
+  background: rgba(212, 212, 212, 0.613);
+}
+.h .c:nth-of-type(32) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 160px;
+  height: 160px;
+  right: 320px;
+  bottom: 320px;
+  -webkit-filter: blur(18.6666666667px);
+  transform-origin: 128px 64px;
+  animation: spin 2s 3.2s linear infinite;
+  background: rgba(204, 204, 204, 0.6);
+}
+.h .c:nth-of-type(33) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 165px;
+  height: 165px;
+  right: 330px;
+  bottom: 330px;
+  -webkit-filter: blur(19px);
+  transform-origin: 132px 66px;
+  animation: spin 2s 3.3s linear infinite;
+  background: rgba(197, 197, 197, 0.588);
+}
+.h .c:nth-of-type(34) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 170px;
+  height: 170px;
+  right: 340px;
+  bottom: 340px;
+  -webkit-filter: blur(19.3333333333px);
+  transform-origin: 136px 68px;
+  animation: spin 2s 3.4s linear infinite;
+  background: rgba(212, 212, 212, 0.575);
+}
+.h .c:nth-of-type(35) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 175px;
+  height: 175px;
+  right: 350px;
+  bottom: 350px;
+  -webkit-filter: blur(19.6666666667px);
+  transform-origin: 140px 70px;
+  animation: spin 2s 3.5s linear infinite;
+  background: rgba(201, 201, 201, 0.563);
+}
+.h .c:nth-of-type(36) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 180px;
+  height: 180px;
+  right: 360px;
+  bottom: 360px;
+  -webkit-filter: blur(20px);
+  transform-origin: 144px 72px;
+  animation: spin 2s 3.6s linear infinite;
+  background: rgba(212, 212, 212, 0.55);
+}
+.h .c:nth-of-type(37) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 185px;
+  height: 185px;
+  right: 370px;
+  bottom: 370px;
+  -webkit-filter: blur(20.3333333333px);
+  transform-origin: 148px 74px;
+  animation: spin 2s 3.7s linear infinite;
+  background: rgba(204, 204, 204, 0.538);
+}
+.h .c:nth-of-type(38) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 190px;
+  height: 190px;
+  right: 380px;
+  bottom: 380px;
+  -webkit-filter: blur(20.6666666667px);
+  transform-origin: 152px 76px;
+  animation: spin 2s 3.8s linear infinite;
+  background: rgba(202, 202, 202, 0.525);
+}
+.h .c:nth-of-type(39) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 195px;
+  height: 195px;
+  right: 390px;
+  bottom: 390px;
+  -webkit-filter: blur(21px);
+  transform-origin: 156px 78px;
+  animation: spin 2s 3.9s linear infinite;
+  background: rgba(202, 202, 202, 0.513);
+}
+.h .c:nth-of-type(40) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 200px;
+  height: 200px;
+  right: 400px;
+  bottom: 400px;
+  -webkit-filter: blur(21.3333333333px);
+  transform-origin: 160px 80px;
+  animation: spin 2s 4s linear infinite;
+  background: rgba(212, 212, 212, 0.5);
+}
+.h .c:nth-of-type(41) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 205px;
+  height: 205px;
+  right: 410px;
+  bottom: 410px;
+  -webkit-filter: blur(21.6666666667px);
+  transform-origin: 164px 82px;
+  animation: spin 2s 4.1s linear infinite;
+  background: rgba(207, 207, 207, 0.488);
+}
+.h .c:nth-of-type(42) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 210px;
+  height: 210px;
+  right: 420px;
+  bottom: 420px;
+  -webkit-filter: blur(22px);
+  transform-origin: 168px 84px;
+  animation: spin 2s 4.2s linear infinite;
+  background: rgba(214, 214, 214, 0.475);
+}
+.h .c:nth-of-type(43) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 215px;
+  height: 215px;
+  right: 430px;
+  bottom: 430px;
+  -webkit-filter: blur(22.3333333333px);
+  transform-origin: 172px 86px;
+  animation: spin 2s 4.3s linear infinite;
+  background: rgba(223, 223, 223, 0.463);
+}
+.h .c:nth-of-type(44) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 220px;
+  height: 220px;
+  right: 440px;
+  bottom: 440px;
+  -webkit-filter: blur(22.6666666667px);
+  transform-origin: 176px 88px;
+  animation: spin 2s 4.4s linear infinite;
+  background: rgba(233, 233, 233, 0.45);
+}
+.h .c:nth-of-type(45) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 225px;
+  height: 225px;
+  right: 450px;
+  bottom: 450px;
+  -webkit-filter: blur(23px);
+  transform-origin: 180px 90px;
+  animation: spin 2s 4.5s linear infinite;
+  background: rgba(226, 226, 226, 0.438);
+}
+.h .c:nth-of-type(46) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 230px;
+  height: 230px;
+  right: 460px;
+  bottom: 460px;
+  -webkit-filter: blur(23.3333333333px);
+  transform-origin: 184px 92px;
+  animation: spin 2s 4.6s linear infinite;
+  background: rgba(219, 219, 219, 0.425);
+}
+.h .c:nth-of-type(47) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 235px;
+  height: 235px;
+  right: 470px;
+  bottom: 470px;
+  -webkit-filter: blur(23.6666666667px);
+  transform-origin: 188px 94px;
+  animation: spin 2s 4.7s linear infinite;
+  background: rgba(228, 228, 228, 0.413);
+}
+.h .c:nth-of-type(48) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 240px;
+  height: 240px;
+  right: 480px;
+  bottom: 480px;
+  -webkit-filter: blur(24px);
+  transform-origin: 192px 96px;
+  animation: spin 2s 4.8s linear infinite;
+  background: rgba(233, 233, 233, 0.4);
+}
+.h .c:nth-of-type(49) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 245px;
+  height: 245px;
+  right: 490px;
+  bottom: 490px;
+  -webkit-filter: blur(24.3333333333px);
+  transform-origin: 196px 98px;
+  animation: spin 2s 4.9s linear infinite;
+  background: rgba(238, 238, 238, 0.388);
+}
+.h .c:nth-of-type(50) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 250px;
+  height: 250px;
+  right: 500px;
+  bottom: 500px;
+  -webkit-filter: blur(24.6666666667px);
+  transform-origin: 200px 100px;
+  animation: spin 2s 5s linear infinite;
+  background: rgba(236, 236, 236, 0.375);
+}
+.h .c:nth-of-type(51) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 255px;
+  height: 255px;
+  right: 510px;
+  bottom: 510px;
+  -webkit-filter: blur(25px);
+  transform-origin: 204px 102px;
+  animation: spin 2s 5.1s linear infinite;
+  background: rgba(241, 241, 241, 0.363);
+}
+.h .c:nth-of-type(52) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 260px;
+  height: 260px;
+  right: 520px;
+  bottom: 520px;
+  -webkit-filter: blur(25.3333333333px);
+  transform-origin: 208px 104px;
+  animation: spin 2s 5.2s linear infinite;
+  background: rgba(247, 247, 247, 0.35);
+}
+.h .c:nth-of-type(53) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 265px;
+  height: 265px;
+  right: 530px;
+  bottom: 530px;
+  -webkit-filter: blur(25.6666666667px);
+  transform-origin: 212px 106px;
+  animation: spin 2s 5.3s linear infinite;
+  background: rgba(245, 245, 245, 0.338);
+}
+.h .c:nth-of-type(54) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 270px;
+  height: 270px;
+  right: 540px;
+  bottom: 540px;
+  -webkit-filter: blur(26px);
+  transform-origin: 216px 108px;
+  animation: spin 2s 5.4s linear infinite;
+  background: rgba(248, 248, 248, 0.325);
+}
+.h .c:nth-of-type(55) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 275px;
+  height: 275px;
+  right: 550px;
+  bottom: 550px;
+  -webkit-filter: blur(26.3333333333px);
+  transform-origin: 220px 110px;
+  animation: spin 2s 5.5s linear infinite;
+  background: rgba(253, 253, 253, 0.313);
+}
+.h .c:nth-of-type(56) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 280px;
+  height: 280px;
+  right: 560px;
+  bottom: 560px;
+  -webkit-filter: blur(26.6666666667px);
+  transform-origin: 224px 112px;
+  animation: spin 2s 5.6s linear infinite;
+  background: rgba(255, 255, 255, 0.3);
+}
+.h .c:nth-of-type(57) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 285px;
+  height: 285px;
+  right: 570px;
+  bottom: 570px;
+  -webkit-filter: blur(27px);
+  transform-origin: 228px 114px;
+  animation: spin 2s 5.7s linear infinite;
+  background: rgba(252, 252, 252, 0.288);
+}
+.h .c:nth-of-type(58) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 290px;
+  height: 290px;
+  right: 580px;
+  bottom: 580px;
+  -webkit-filter: blur(27.3333333333px);
+  transform-origin: 232px 116px;
+  animation: spin 2s 5.8s linear infinite;
+  background: rgba(252, 252, 252, 0.275);
+}
+.h .c:nth-of-type(59) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 295px;
+  height: 295px;
+  right: 590px;
+  bottom: 590px;
+  -webkit-filter: blur(27.6666666667px);
+  transform-origin: 236px 118px;
+  animation: spin 2s 5.9s linear infinite;
+  background: rgba(255, 255, 255, 0.263);
+}
+.h .c:nth-of-type(60) {
+  box-shadow: 3px 0px rgba(255, 255, 255, 0), 6px -5px rgba(10, 0, 0, 0);
+  width: 300px;
+  height: 300px;
+  right: 600px;
+  bottom: 600px;
+  -webkit-filter: blur(28px);
+  transform-origin: 240px 120px;
+  animation: spin 2s 6s linear infinite;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
