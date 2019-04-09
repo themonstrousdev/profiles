@@ -33,6 +33,7 @@ $(window).ready(()=>{
     }
     
     .context-menu .context-item {
+      box-sizing: border-box;
       padding: 1vh 5vh;
       text-align: center;
       font-family: "Share", sans-serif;
