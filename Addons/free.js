@@ -134,7 +134,8 @@ $(window).on("load", ()=>{
       position: absolute;
       top: 0;
       left: 0;
-      height: calc(100% + 1.7vw);
+      height: 100%;
+      width: 100%;
       padding: 0;
       white-space: pre;
     }
