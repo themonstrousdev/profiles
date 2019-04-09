@@ -1,4 +1,4 @@
-$(window).on("load", ()=>{
+$(window).ready(()=>{
   console.log("%cBIG YEEt", "color: transparent; background: url(https://www.themonster.xyz/assets/main-logo.png) center/contain no-repeat; font-size: 20vw");
 
   console.log('%cSTOP!', 'color: red; text-shadow: 2px 0px #000, 0px -2px #000, -2px 0px #000, 0px 2px #000;font-size: 7vh; font-weight: 600;font-family:Calibri');

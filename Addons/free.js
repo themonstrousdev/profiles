@@ -1,8 +1,8 @@
-$(window).on("load", ()=>{
+$(window).ready(()=>{
   $("head").append(`
   <link href="https://www.themonster.xyz/styles/fancy-fonts.css" rel="stylesheet">
   <link href="https://www.themonster.xyz/styles/google-fonts.css rel="stylesheet">`);
-  
+
   var styles = document.head.querySelectorAll("style:not(#context-menu):not(#code-overlay)"),
   style = styles[styles.length-1].innerHTML,
   sStart = style.search("SOURCE:") + 7 ? style.search("SOURCE:") + 7 : null,
