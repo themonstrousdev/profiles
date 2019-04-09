@@ -66,7 +66,7 @@ $(window).contextmenu((e)=> {
     $(".context-menu").remove();
   };
 
-  var styles = document.head.querySelectorAll("style"),
+  var styles = document.head.querySelectorAll("style:not(#context-menu)"),
   inner = styles[styles.length-1].innerHTML,
   pStart = inner.search("FOR:") + 4,
   pEnd = inner.search("RPC Profile") - 1,
