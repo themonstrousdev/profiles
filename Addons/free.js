@@ -39,6 +39,7 @@ $(window).ready(()=>{
       font-family: "Share", sans-serif;
       font-size: 2.5vh;
       width: 100%;
+      border: none;
       border-bottom: .1vh solid #777;
       transition: background .2s ease-in-out;
     }
@@ -54,7 +55,8 @@ $(window).ready(()=>{
     .context-menu a.context-item {
       color: inherit;
       text-decoration: none;
-      border: none;
+      font-family: inherit !important;
+      font-size: inherit !important;
     }`
   }).appendTo("head");
 
