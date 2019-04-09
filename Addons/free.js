@@ -110,7 +110,7 @@ $(window).on("load", ()=>{
       filter: invert(60%);
     }
     
-    #code .scrollerWrap {
+    #code .codeWrap {
       position: absolute;
       top: 3vw;
       left: 3vw;
@@ -124,7 +124,7 @@ $(window).on("load", ()=>{
       box-shadow: inset 0vh 1vh 2vh rgba(0,0,0,0.4);
     }
     
-    #code .scroller {
+    #code .codeScroller {
       position: absolute;
       top: 0;
       left: 0;
@@ -249,17 +249,17 @@ $(window).on("load", ()=>{
             }).appendTo("#code");
 
             $("<div />", {
-              class: "scrollerWrap"
+              class: "codeWrap"
             }).appendTo("#code");
 
             $("<div />", {
-              class: "scroller"
-            }).appendTo("#code .scrollerWrap");
+              class: "codeScroller"
+            }).appendTo("#code .codeWrap");
 
             $("<textarea>", {
               text: data,
               readonly: ""
-            }).appendTo("#code .scroller");
+            }).appendTo("#code .codeScroller");
 
             $("<div />", {
               class: "exit",
