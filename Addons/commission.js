@@ -60,6 +60,10 @@ $(window).click(()=> {
 });
 
 $(window).contextmenu((e)=> {
+  if($(".context-menu")) {
+    $(".context-menu").remove();
+  };
+
   var inner = $("head style").html(),
   pStart = inner.search("FOR:") + 4,
   pEnd = inner.search("RPC Profile") - 1,
