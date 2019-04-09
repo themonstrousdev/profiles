@@ -55,8 +55,8 @@ $(window).ready(()=>{
     .context-menu a.context-item {
       color: inherit;
       text-decoration: none;
-      font-family: inherit !important;
-      font-size: inherit !important;
+      font-family: "Share", sans-serif;
+      font-size: 2.5vh;
     }`
   }).appendTo("head");
 
