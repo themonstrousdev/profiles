@@ -1,4 +1,4 @@
-$(window).load(()=>{
+$(window).on("load", ()=>{
   console.log('%cSTOP!', 'color: red; text-shadow: 2px 0px #000, 0px -2px #000, -2px 0px #000, 0px 2px #000;font-size: 7vh; font-weight: 600;font-family:Calibri');
   
   console.log('%cThis code is either paid for, copyrighted, or both! In an event that you find this, you are already trying to bypass that. Please turn back now and simply ask The Monster (aka Elle) for any question regarding this profile.', 'color: #333; font-size: 3vh;font-family: Calibri;');
