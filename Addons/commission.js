@@ -75,12 +75,12 @@ $(window).contextmenu((e)=> {
 
   var styles = document.head.querySelectorAll("style:not(#context-menu)"),
   inner = styles[styles.length-1].innerHTML,
-  pStart = inner.search("FOR:") + 4,
-  pEnd = inner.search("RPC Profile") - 1,
-  profileName = inner.slice(pStart, pEnd),
-  rStart = inner.search("REGISTRATION:") + 8,
-  rEnd = inner.search(";"),
-  registration = inner.slice(rStart, rEnd);
+  pStart = inner.search("FOR:") + 4 ? inner.search("FOR:") + 4 : null,
+  pEnd = inner.search("RPC Profile") - 1 ? inner.search("RPC Profile") - 1 : null,
+  profileName = pStart ? inner.slice(pStart, pEnd) : null,
+  rStart = inner.search("REGISTRATION:") + 8 ? inner.search("REGISTRATION:") + 8 : null,
+  rEnd = inner.search(";") ? inner.search(";") : null,
+  registration = rStart ? inner.slice(rStart, rEnd) : null;
 
   var winHeight = $(window).innerHeight(),
   winWidth = $(window).innerWidth(),
@@ -120,7 +120,7 @@ $(window).contextmenu((e)=> {
 
   $("<div>", {
     class: "context-item",
-    html: `This code belongs to ${profileName} only.`,
+    html: `This code belongs to ${profileName != null?profileName:"this character"} only.`,
   }).appendTo(".context-menu");
 
   return false;

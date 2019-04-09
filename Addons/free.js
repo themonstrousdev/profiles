@@ -1,12 +1,12 @@
 $(window).on("load", ()=>{
   var styles = document.head.querySelectorAll("style:not(#context-menu):not(#code-overlay)"),
   style = styles[styles.length-1].innerHTML,
-  sStart = style.search("SOURCE:") + 7,
-  sEnd = style.search("-"),
-  source = style.slice(sStart, sEnd),
-  rStart = style.search("REGISTRATION:") + 8,
-  rEnd = style.search(";"),
-  registration = style.slice(rStart, rEnd);;
+  sStart = style.search("SOURCE:") + 7 ? style.search("SOURCE:") + 7 : null,
+  sEnd = style.search("-") ? style.search("-") : null,
+  source = sStart ? style.slice(sStart, sEnd) : null,
+  rStart = style.search("REGISTRATION:") + 8 ? style.search("REGISTRATION:") + 8 : null,
+  rEnd = style.search(";") ? style.search(";") : null,
+  registration = rStart ? style.slice(rStart, rEnd) : null;
 
   $("<style>", {
     id: "context-menu",
@@ -226,119 +226,123 @@ $(window).on("load", ()=>{
       rel: "noopener noreferrer"
     }).appendTo(".context-menu");
   
-    $("<a>", {
-      class: "context-item hoverable",
-      html: "Copyright Registration",
-      href: registration,
-      target: "_blank",
-      rel: "nooopener noreferrer"
-    }).appendTo(".context-menu");
+    if(registration != null) {
+      $("<a>", {
+        class: "context-item hoverable",
+        html: "Copyright Registration",
+        href: registration,
+        target: "_blank",
+        rel: "nooopener noreferrer"
+      }).appendTo(".context-menu");
+    }
   
     $("<div>", {
       class: "context-item",
       html: "This code is free for personal use."
     }).appendTo(".context-menu");
 
-    $("<div>", {
-      class: "context-item hoverable",
-      html: `View Code Source`,
-      click: function () {
-        $.ajax({
-          url: source,
-          dataType: 'text',
-          success: function (data) {
-            $("body").append($("<div />", {
-              id: "code"
-            }));
-
-            $("<div />", {
-              class: "texture"
-            }).appendTo("#code");
-
-            $("<div />", {
-              class: "codeWrap"
-            }).appendTo("#code");
-
-            $("<div />", {
-              class: "codeScroller"
-            }).appendTo("#code .codeWrap");
-
-            $("<textarea>", {
-              text: data,
-              readonly: ""
-            }).appendTo("#code .codeScroller");
-
-            $("<div />", {
-              class: "exit",
-              click: function() {
-                $("#code").fadeOut(200);
-                setTimeout(function(){
-                  $("#code").remove();
-                }, 200);
-              }
-            }).appendTo("#code");
-
-            $("<div />", {
-              class: "choices"
-            }).appendTo("#code")
-
-            $("<div />", {
-              class: "choice",
-              html: "CSS Only",
-              click: function() {
-                var cssEnd = data.search("/style") - 1,
-                subString = data.slice(7, cssEnd);
-
-                $("#code textarea").val(subString);
-              }
-            }).appendTo("#code .choices");
-
-            $("<div />", {
-              class: "choice",
-              html: "HTML Only",
-              click: function() {
-                var htmlStart = data.search("/style") + 7,
-                subString = data.slice(htmlStart);
-
-                $("#code textarea").val(subString);
-              }
-            }).appendTo("#code .choices");
-
-            $("<div />", {
-              class: "choice",
-              html: "Show Full Code",
-              click: function() {
-                $("#code textarea").val(data);
-              }
-            }).appendTo("#code .choices");
-
-            $("<div />", {
-              class: "choice",
-              html: "Copy Code",
-              click: function() {
-                $("#code textarea").select();
-                document.execCommand("copy");
-                $(this).css("color", "var(--green)");
-                $(this).html("Code copied!");
-                if (window.getSelection) {
-                  window.getSelection().removeAllRanges();
-                } else if (document.selection) {
-                  document.selection.empty();
+    if(source != null) {
+      $("<div>", {
+        class: "context-item hoverable",
+        html: `View Code Source`,
+        click: function () {
+          $.ajax({
+            url: source,
+            dataType: 'text',
+            success: function (data) {
+              $("body").append($("<div />", {
+                id: "code"
+              }));
+  
+              $("<div />", {
+                class: "texture"
+              }).appendTo("#code");
+  
+              $("<div />", {
+                class: "codeWrap"
+              }).appendTo("#code");
+  
+              $("<div />", {
+                class: "codeScroller"
+              }).appendTo("#code .codeWrap");
+  
+              $("<textarea>", {
+                text: data,
+                readonly: ""
+              }).appendTo("#code .codeScroller");
+  
+              $("<div />", {
+                class: "exit",
+                click: function() {
+                  $("#code").fadeOut(200);
+                  setTimeout(function(){
+                    $("#code").remove();
+                  }, 200);
                 }
-
-                setTimeout(function(){
-                  $("#code .choices .choice:last-child").html("Copy Code");
-                  $("#code .choices .choice:last-child").removeAttr("style");
-                }, 2000);
-              }
-            }).appendTo("#code .choices");
-          },
-          error: function() {
-            console.log("Welp....");
-          }
-        })
-      }
-    }).appendTo(".context-menu");
+              }).appendTo("#code");
+  
+              $("<div />", {
+                class: "choices"
+              }).appendTo("#code")
+  
+              $("<div />", {
+                class: "choice",
+                html: "CSS Only",
+                click: function() {
+                  var cssEnd = data.search("/style") - 1,
+                  subString = data.slice(7, cssEnd);
+  
+                  $("#code textarea").val(subString);
+                }
+              }).appendTo("#code .choices");
+  
+              $("<div />", {
+                class: "choice",
+                html: "HTML Only",
+                click: function() {
+                  var htmlStart = data.search("/style") + 7,
+                  subString = data.slice(htmlStart);
+  
+                  $("#code textarea").val(subString);
+                }
+              }).appendTo("#code .choices");
+  
+              $("<div />", {
+                class: "choice",
+                html: "Show Full Code",
+                click: function() {
+                  $("#code textarea").val(data);
+                }
+              }).appendTo("#code .choices");
+  
+              $("<div />", {
+                class: "choice",
+                html: "Copy Code",
+                click: function() {
+                  $("#code textarea").select();
+                  document.execCommand("copy");
+                  $(this).css("color", "var(--green)");
+                  $(this).html("Code copied!");
+                  if (window.getSelection) {
+                    window.getSelection().removeAllRanges();
+                  } else if (document.selection) {
+                    document.selection.empty();
+                  }
+  
+                  setTimeout(function(){
+                    $("#code .choices .choice:last-child").html("Copy Code");
+                    $("#code .choices .choice:last-child").removeAttr("style");
+                  }, 2000);
+                }
+              }).appendTo("#code .choices");
+            },
+            error: function() {
+              console.log("Welp....");
+            }
+          })
+        }
+      }).appendTo(".context-menu");
+    }
   
     return false;
   });
