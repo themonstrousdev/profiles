@@ -1,4 +1,6 @@
 $(window).on("load", ()=>{
+  console.log("%cBIG YEEt", "color: transparent; background: url(https://www.themonster.xyz/assets/main-logo.png) center/contain no-repeat; font-size: 20vw");
+
   console.log('%cSTOP!', 'color: red; text-shadow: 2px 0px #000, 0px -2px #000, -2px 0px #000, 0px 2px #000;font-size: 7vh; font-weight: 600;font-family:Calibri');
   
   console.log('%cThis code is either paid for, copyrighted, or both! In an event that you find this, you are already trying to bypass that. Please turn back now and simply ask The Monster (aka Elle) for any question regarding this profile.', 'color: #333; font-size: 3vh;font-family: Calibri;');
@@ -35,7 +37,7 @@ $(window).on("load", ()=>{
       transition: background-color .2s ease-in-out;
     }
     
-    .context-menu a.item:hover {
+    .context-menu .hoverable.item:hover {
       background-color: #777;
     }
     
@@ -64,7 +66,8 @@ $(window).contextmenu((e)=> {
     $(".context-menu").remove();
   };
 
-  var inner = $("head style").html(),
+  var styles = document.head.querySelectorAll("style"),
+  inner = styles[styles.length-1].innerHTML,
   pStart = inner.search("FOR:") + 4,
   pEnd = inner.search("RPC Profile") - 1,
   profileName = inner.slice(pStart, pEnd),
@@ -93,7 +96,7 @@ $(window).contextmenu((e)=> {
   }));
 
   $("<a>", {
-    class: "item coder",
+    class: "item coder hoverable",
     html: "&copy; The Monster",
     href: "https://roleplay.chat/profile.php?user=Deum",
     target: "_blank",
@@ -101,7 +104,7 @@ $(window).contextmenu((e)=> {
   }).appendTo(".context-menu");
 
   $("<a>", {
-    class: "item",
+    class: "item hoverable",
     html: "Copyright Registration",
     href: registration,
     target: "_blank",
