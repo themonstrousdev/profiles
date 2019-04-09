@@ -27,7 +27,7 @@ $(window).on("load", ()=>{
       }
     }
     
-    .context-menu .item {
+    .context-menu .context-item {
       padding: 1vh 5vh;
       text-align: center;
       font-family: "Share", sans-serif;
@@ -37,11 +37,11 @@ $(window).on("load", ()=>{
       transition: background-color .2s ease-in-out;
     }
     
-    .context-menu .hoverable.item:hover {
+    .context-menu .hoverable.context-item:hover {
       background-color: #777;
     }
     
-    .context-menu .item.coder {
+    .context-menu .context-item.coder {
       background: url(https://www.themonster.xyz/assets/main-logo.png) .5vw center/auto 60% no-repeat;
     }`
   }).appendTo("head");
@@ -96,7 +96,7 @@ $(window).contextmenu((e)=> {
   }));
 
   $("<a>", {
-    class: "item coder hoverable",
+    class: "context-item coder hoverable",
     html: "&copy; The Monster",
     href: "https://roleplay.chat/profile.php?user=Deum",
     target: "_blank",
@@ -104,7 +104,7 @@ $(window).contextmenu((e)=> {
   }).appendTo(".context-menu");
 
   $("<a>", {
-    class: "item hoverable",
+    class: "context-item hoverable",
     html: "Copyright Registration",
     href: registration,
     target: "_blank",
@@ -112,7 +112,7 @@ $(window).contextmenu((e)=> {
   }).appendTo(".context-menu");
 
   $("<div>", {
-    class: "item",
+    class: "context-item",
     html: `This code belongs to ${profileName} only.`,
   }).appendTo(".context-menu");
 
