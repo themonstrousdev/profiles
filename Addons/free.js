@@ -145,7 +145,7 @@ $(window).on("load", ()=>{
       border: transparent;
       outline: none;
       height: 100%;
-      width: calc(100% + 1vw);
+      width: calc(100% + 1.7vw);
       padding: 5vh;
       font-family: monospace;
       font-size: 2.1vh;
