@@ -44,6 +44,13 @@ $(window).on("load", ()=>{
     
     .context-menu .context-item.coder {
       background: url(https://www.themonster.xyz/assets/main-logo.png) .5vw center/auto 60% no-repeat;
+    }
+    
+    .context-menu a.context-item {
+      color: inherit;
+      text-decoration: none;
+      padding: 0;
+      border: none;
     }`
   }).appendTo("head");
 
