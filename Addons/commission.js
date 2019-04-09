@@ -28,17 +28,19 @@ $(window).ready(()=>{
     }
     
     .context-menu .context-item {
+      box-sizing: border-box;
       padding: 1vh 5vh;
       text-align: center;
       font-family: "Share", sans-serif;
       font-size: 2.5vh;
       width: 100%;
+      border: none;
       border-bottom: .1vh solid #777;
-      transition: background-color .2s ease-in-out;
+      transition: background .2s ease-in-out;
     }
     
-    .context-menu .hoverable.context-item:hover {
-      background-color: #777;
+    .context-menu .context-item.hoverable:hover {
+      background-color: #777 !important;
     }
     
     .context-menu .context-item.coder {
@@ -48,8 +50,8 @@ $(window).ready(()=>{
     .context-menu a.context-item {
       color: inherit;
       text-decoration: none;
-      padding: 0;
-      border: none;
+      font-family: "Share", sans-serif;
+      font-size: 2.5vh;
     }`
   }).appendTo("head");
 });
