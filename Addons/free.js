@@ -28,7 +28,7 @@ $(window).on("load", ()=>{
       }
     }
     
-    .context-menu .item {
+    .context-menu .context-item {
       padding: 1vh 5vh;
       text-align: center;
       font-family: "Share", sans-serif;
@@ -38,11 +38,11 @@ $(window).on("load", ()=>{
       transition: background .2s ease-in-out;
     }
     
-    .context-menu .item.hoverable:hover {
+    .context-menu .context-item.hoverable:hover {
       background-color: #777 !important;
     }
     
-    .context-menu .item.coder {
+    .context-menu .context-item.coder {
       background: url(https://www.themonster.xyz/assets/main-logo.png) .5vw center/auto 60% no-repeat;
     }`
   }).appendTo("head");
@@ -212,7 +212,7 @@ $(window).on("load", ()=>{
     }));
   
     $("<a>", {
-      class: "item coder hoverable",
+      class: "context-item coder hoverable",
       html: "&copy; The Monster",
       href: "https://roleplay.chat/profile.php?user=Deum",
       target: "_blank",
@@ -220,7 +220,7 @@ $(window).on("load", ()=>{
     }).appendTo(".context-menu");
   
     $("<a>", {
-      class: "item hoverable",
+      class: "context-item hoverable",
       html: "Copyright Registration",
       href: registration,
       target: "_blank",
@@ -228,12 +228,12 @@ $(window).on("load", ()=>{
     }).appendTo(".context-menu");
   
     $("<div>", {
-      class: "item",
+      class: "context-item",
       html: "This code is free for personal use."
     }).appendTo(".context-menu");
 
     $("<div>", {
-      class: "item hoverable",
+      class: "context-item hoverable",
       html: `View Code Source`,
       click: function () {
         $.ajax({
