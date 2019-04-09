@@ -49,7 +49,6 @@ $(window).on("load", ()=>{
     .context-menu a.context-item {
       color: inherit;
       text-decoration: none;
-      padding: 0;
       border: none;
     }`
   }).appendTo("head");
