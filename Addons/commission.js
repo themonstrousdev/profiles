@@ -7,6 +7,10 @@ $(window).ready(()=>{
   
   console.log('%cIf you want to know more, go to http://www.themonster.xyz', 'color: #333; font-size: 3vh;font-family: Calibri;');
 
+  $("head").append(`
+  <link href="https://www.themonster.xyz/styles/fancy-fonts.css" rel="stylesheet">
+  <link href="https://www.themonster.xyz/styles/google-fonts.css" rel="stylesheet">`);
+
   $("<style>", {
     id: "context-menu",
     html: `
