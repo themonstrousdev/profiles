@@ -19,6 +19,7 @@ $(window).ready(()=>{
       box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.8);
       animation: context-open-new 300ms cubic-bezier(0, 0, 0, 1);
       transform-origin: top;
+      color: #111;
     }
     
     @keyframes context-open-new {
