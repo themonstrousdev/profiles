@@ -193,7 +193,31 @@ $(window).ready(()=>{
     }`
   }).appendTo("head");
 
-  console.log("%cBIG YEEt", "color: transparent; background: url(https://www.themonster.xyz/assets/main-logo.png) center/contain no-repeat; font-size: 20vw");
+  function renderImage (url, scale = 0.1) {
+    let img = new Image()
+   
+    img.onload = () => {
+      const style = `
+        color: transparent;
+        display: block !important;
+        margin: 10px 0;
+        font-size: ${img.height * scale}px;
+        padding: ${Math.floor(img.height * scale/2)}px ${Math.floor(img.width * scale/2)}px;
+        background: url(${url});
+        background-size: ${img.width * scale}px ${img.height * scale}px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      `
+      console.log('%cB', style);
+    }
+   
+    img.src = url;
+  }
+   
+  console.image = renderImage;
+  
+  console.image("https://www.themonster.xyz/assets/main-logo.png");
 
   console.log('%cHi, there!', 'color: green; text-shadow: 2px 0px #000, 0px -2px #000, -2px 0px #000, 0px 2px #000;font-size: 7vh; font-weight: 600;font-family:Calibri');
 
