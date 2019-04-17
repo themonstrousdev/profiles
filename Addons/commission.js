@@ -49,6 +49,7 @@ $(window).ready(()=>{
       animation: context-open-new 300ms cubic-bezier(0, 0, 0, 1);
       transform-origin: top;
       color: #111;
+      text-transform: initial;
     }
     
     @keyframes context-open-new {
@@ -108,7 +109,7 @@ $(window).contextmenu((e)=> {
   var styles = document.head.querySelectorAll("style:not(#context-menu)"),
   inner = styles[styles.length-1].innerHTML,
   pStart = inner.includes("FOR:") ? inner.search("FOR:") + 4 : null,
-  pEnd = inner.includes("[") ? inner.search("[") - 1 : null,
+  pEnd = inner.includes("\\[") ? inner.search("[") - 1 : null,
   profileName = pStart && pEnd ? inner.slice(pStart, pEnd) : null,
   rStart = inner.search("REGISTRATION:") + 8 ? inner.search("REGISTRATION:") + 8 : null,
   rEnd = inner.search(";") ? inner.search(";") : null,
