@@ -107,8 +107,8 @@ $(window).contextmenu((e)=> {
 
   var styles = document.head.querySelectorAll("style:not(#context-menu)"),
   inner = styles[styles.length-1].innerHTML,
-  pStart = inner.search("FOR:") + 4 ? inner.search("FOR:") + 4 : null,
-  pEnd = inner.search("RPC Profile") - 1 ? inner.search("RPC Profile") - 1 : null,
+  pStart = inner.includes("FOR:") ? inner.search("FOR:") + 4 : null,
+  pEnd = inner.search("[") - 1 ? inner.search("[") - 1 : null,
   profileName = pStart ? inner.slice(pStart, pEnd) : null,
   rStart = inner.search("REGISTRATION:") + 8 ? inner.search("REGISTRATION:") + 8 : null,
   rEnd = inner.search(";") ? inner.search(";") : null,
