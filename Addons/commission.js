@@ -106,7 +106,7 @@ $(window).contextmenu((e)=> {
     $(".context-menu").remove();
   };
 
-  var styles = document.head.querySelectorAll("style:not(#context-menu)"),
+  var styles = $("body").includes("<style>") ? document.body.querySelectorAll("style") : document.head.querySelectorAll("style:not(#context-menu):not(#code-overlay)"),
   inner = styles[styles.length-1].innerHTML,
   pStart = inner.includes("FOR:") ? inner.search("FOR:") + 4 : null,
   pEnd = new RegExp("\\[").test(inner) ? inner.search("\\[") - 1 : null,
