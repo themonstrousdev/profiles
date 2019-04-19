@@ -111,7 +111,10 @@ $(window).contextmenu((e)=> {
   var bodyStyle = document.body.querySelectorAll("style").length > 0,
   styles = bodyStyle ? document.body.querySelectorAll("style") : document.head.querySelectorAll("style:not(#context-menu):not(#code-overlay)"),
   style = styles[styles.length-1].innerHTML,
-  rStart = style.includes("REGISTRATION:") ? style.indexOf("REGISTRATION:") + 13 : null,
+  pStart = style.includes("FOR:") ? style.search("FOR:") + 4 : null,
+  pEnd = new RegExp("\\[").test(style) ? style.search("\\[") - 1 : null,
+  profileName = pStart && pEnd ? style.slice(pStart, pEnd) : null,
+  rStart = style.includes("REGISTRATION:") ? style.search("REGISTRATION:") + 13 : null,
   rEnd = style.search(";") ? style.search(";") : null,
   registration = rStart ? style.slice(rStart, rEnd) : null;
 

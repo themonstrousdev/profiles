@@ -17,7 +17,7 @@ $(window).ready(()=>{
   sStart = style.includes("SOURCE:") ? style.search("SOURCE:") + 7 : null,
   sEnd = sStart ? style.indexOf("-", sStart) : 0,
   source = sStart && sEnd? style.slice(sStart, sEnd) : null,
-  rStart = style.includes("REGISTRATION:") ? style.indexOf("REGISTRATION:", sEnd) + 13 : null,
+  rStart = style.includes("REGISTRATION:") ? style.search("REGISTRATION:", sEnd) + 13 : null,
   rEnd = style.search(";") ? style.search(";") : null,
   registration = rStart ? style.slice(rStart, rEnd) : null;
 
