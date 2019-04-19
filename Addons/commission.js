@@ -108,15 +108,15 @@ $(window).contextmenu((e)=> {
     $(".context-menu").remove();
   };
 
-  var body = $("body").html(),
-  styles = body.includes("<style>") ? document.body.querySelectorAll("style") : document.head.querySelectorAll("style:not(#context-menu):not(#code-overlay)"),
-  inner = styles[styles.length-1].innerHTML,
-  pStart = inner.includes("FOR:") ? inner.search("FOR:") + 4 : null,
-  pEnd = new RegExp("\\[").test(inner) ? inner.search("\\[") - 1 : null,
-  profileName = pStart && pEnd ? inner.slice(pStart, pEnd) : null,
-  rStart = inner.search("REGISTRATION:") + 8 ? inner.search("REGISTRATION:") + 8 : null,
-  rEnd = inner.search(";") ? inner.search(";") : null,
-  registration = rStart ? inner.slice(rStart, rEnd) : null;
+  var bodyStyle = document.body.querySelectorAll("style").length > 0,
+  styles = bodyStyle ? document.body.querySelectorAll("style") : document.head.querySelectorAll("style:not(#context-menu):not(#code-overlay)"),
+  style = styles[styles.length-1].innerHTML,
+  sStart = style.includes("SOURCE:") ? style.search("SOURCE:") + 7 : null,
+  sEnd = style.search("-") ? style.indexOf("-", sStart) : null,
+  source = sStart ? style.slice(sStart, sEnd) : null,
+  rStart = style.includes("REGISTRATION:") ? style.indexOf("REGISTRATION:", sEnd) + 8 : null,
+  rEnd = style.search(";") ? style.search(";") : null,
+  registration = rStart ? style.slice(rStart, rEnd) : null;
 
   var winHeight = $(window).innerHeight(),
   winWidth = $(window).innerWidth(),

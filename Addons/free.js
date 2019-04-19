@@ -11,13 +11,13 @@ $(window).ready(()=>{
   <link href="https://www.themonster.xyz/styles/fancy-fonts.css" rel="stylesheet">
   <link href="https://www.themonster.xyz/styles/google-fonts.css" rel="stylesheet">`);
 
-  var body = $("body").html(),
-  styles = body.includes("<style>") ? document.body.querySelectorAll("style") : document.head.querySelectorAll("style:not(#context-menu):not(#code-overlay)"),
+  var bodyStyle = document.body.querySelectorAll("style").length > 0,
+  styles = bodyStyle ? document.body.querySelectorAll("style") : document.head.querySelectorAll("style:not(#context-menu):not(#code-overlay)"),
   style = styles[styles.length-1].innerHTML,
-  sStart = style.search("SOURCE:") + 7 ? style.search("SOURCE:") + 7 : null,
-  sEnd = style.search("-") ? style.search("-") : null,
+  sStart = style.includes("SOURCE:") ? style.search("SOURCE:") + 7 : null,
+  sEnd = style.search("-") ? style.indexOf("-", sStart) : null,
   source = sStart ? style.slice(sStart, sEnd) : null,
-  rStart = style.search("REGISTRATION:") + 8 ? style.search("REGISTRATION:") + 8 : null,
+  rStart = style.includes("REGISTRATION:") ? style.indexOf("REGISTRATION:", sEnd) + 8 : null,
   rEnd = style.search(";") ? style.search(";") : null,
   registration = rStart ? style.slice(rStart, rEnd) : null;
 
