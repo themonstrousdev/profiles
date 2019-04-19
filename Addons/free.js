@@ -15,9 +15,9 @@ $(window).ready(()=>{
   styles = bodyStyle ? document.body.querySelectorAll("style") : document.head.querySelectorAll("style:not(#context-menu):not(#code-overlay)"),
   style = styles[styles.length-1].innerHTML,
   sStart = style.includes("SOURCE:") ? style.search("SOURCE:") + 7 : null,
-  sEnd = style.search("-") ? style.indexOf("-", sStart) : null,
-  source = sStart ? style.slice(sStart, sEnd) : null,
-  rStart = style.includes("REGISTRATION:") ? style.indexOf("REGISTRATION:", sEnd) + 8 : null,
+  sEnd = sStart ? style.indexOf("-", sStart) : 0,
+  source = sStart && sEnd? style.slice(sStart, sEnd) : null,
+  rStart = style.includes("REGISTRATION:") ? style.indexOf("REGISTRATION:", sEnd) + 13 : null,
   rEnd = style.search(";") ? style.search(";") : null,
   registration = rStart ? style.slice(rStart, rEnd) : null;
 
