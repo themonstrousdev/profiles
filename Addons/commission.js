@@ -66,6 +66,7 @@ $(window).ready(()=>{
       font-size: 2.5vh;
       width: 100%;
       border: none;
+      background: transparent;
       border-bottom: .1vh solid #777;
       transition: background .2s ease-in-out;
     }
@@ -80,6 +81,7 @@ $(window).ready(()=>{
     
     .context-menu a.context-item {
       color: inherit;
+      background: transparent;
       text-decoration: none;
       font-family: "Share", sans-serif;
       font-size: 2.5vh;
