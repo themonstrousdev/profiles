@@ -45,11 +45,10 @@ $(window).ready(()=>{
       display: flex;
       flex-flow: column wrap;
       width: 17vw;
-      box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.8);
+      box-shadow: .5vh .5vh .5vh rgba(0, 0, 0, 0.3);
       animation: context-open-new 300ms cubic-bezier(0, 0, 0, 1);
       transform-origin: top;
       color: #111;
-      text-transform: initial;
     }
     
     @keyframes context-open-new {
