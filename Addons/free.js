@@ -268,7 +268,15 @@ $(window).ready(()=>{
       target: "_blank",
       rel: "noopener noreferrer"
     }).appendTo(".context-menu");
-  
+    
+    $("<a>", {
+      class: "context-item hoverable",
+      html: "License : (cc) BY-NC-ND",
+      href: "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode",
+      target: "_blank",
+      rel: "noopener noreferrer"
+    }).appendTo(".context-menu");
+
     if(registration != null) {
       $("<a>", {
         class: "context-item hoverable",
