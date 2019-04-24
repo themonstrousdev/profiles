@@ -34,6 +34,7 @@ $(window).ready(()=>{
       animation: context-open-new 300ms cubic-bezier(0, 0, 0, 1);
       transform-origin: top;
       color: #111;
+      font-style: normal;
     }
     
     @keyframes context-open-new {
@@ -271,7 +272,7 @@ $(window).ready(()=>{
     
     $("<a>", {
       class: "context-item hoverable",
-      html: "License : (cc) BY-NC-ND",
+      html: "License : <img src='https://mirrors.creativecommons.org/presskit/icons/cc.svg' style='height: 2.5vh; width: auto;' alt='Creative Commons'> BY-NC-ND",
       href: "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode",
       target: "_blank",
       rel: "noopener noreferrer"
