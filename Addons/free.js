@@ -19,7 +19,8 @@ $(window).ready(()=>{
   source = sStart && sEnd? style.slice(sStart, sEnd) : null,
   rStart = style.includes("REGISTRATION:") ? style.search("REGISTRATION:", sEnd) + 13 : null,
   rEnd = style.search(";") ? style.search(";") : null,
-  registration = rStart ? style.slice(rStart, rEnd) : null;
+  registration = rStart ? style.slice(rStart, rEnd) : null,
+  showCode = false;
 
   $("<style>", {
     id: "context-menu",
@@ -298,6 +299,11 @@ $(window).ready(()=>{
         class: "context-item hoverable",
         html: `View Code Source`,
         click: function () {
+          if(showCode) {
+            return;
+          }
+
+          showCode = true;
           $.ajax({
             url: source,
             dataType: 'text',
@@ -326,6 +332,7 @@ $(window).ready(()=>{
               $("<div />", {
                 class: "exit",
                 click: function() {
+                  showCode = false;
                   $("#code").fadeOut(200);
                   setTimeout(function(){
                     $("#code").remove();
