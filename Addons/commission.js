@@ -66,6 +66,9 @@ $(window).ready(()=>{
       font-size: 2.5vh;
       width: 100%;
       border: none;
+      font-style: normal;
+      text-shadow: none;
+      text-transform: initial;
       background: transparent;
       border-bottom: .1vh solid #777;
       transition: background .2s ease-in-out;

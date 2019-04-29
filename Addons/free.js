@@ -35,7 +35,6 @@ $(window).ready(()=>{
       animation: context-open-new 300ms cubic-bezier(0, 0, 0, 1);
       transform-origin: top;
       color: #111;
-      font-style: normal;
     }
     
     @keyframes context-open-new {
@@ -52,6 +51,9 @@ $(window).ready(()=>{
       font-size: 2.5vh;
       width: 100%;
       border: none;
+      font-style: normal;
+      text-shadow: none;
+      text-transform: initial;
       background: transparent;
       border-bottom: .1vh solid #777;
       transition: background .2s ease-in-out;
