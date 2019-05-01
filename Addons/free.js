@@ -275,7 +275,7 @@ $(window).ready(()=>{
     
     $("<a>", {
       class: "context-item hoverable",
-      html: "License : <img src='https://mirrors.creativecommons.org/presskit/icons/cc.svg' style='height: 2.5vh; width: auto;' alt='Creative Commons'> BY-NC-ND",
+      html: "License : <img src='https://www.themonster.xyz/assets/creativecommons.svg' style='height: 2.5vh; width: auto;' alt='Creative Commons'> BY-NC-ND",
       href: "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode",
       target: "_blank",
       rel: "noopener noreferrer"
