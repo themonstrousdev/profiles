@@ -409,7 +409,7 @@ $(window).ready(()=>{
     if(hasSelected) {
       $("<a>", {
         class: "context-item hoverable",
-        style: "display: flex; flex-flow: row wrap; justify-content: space-between;",
+        style: "display: flex; flex-flow: row wrap; justify-content: space-between;align-items: center;align-content: center;",
         html: "<span>Copy<span> <span style='opacity: .6;font-size: 80%'>Ctrl + C</span>",
         click: function() {
           document.execCommand("copy");
