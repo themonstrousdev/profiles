@@ -88,6 +88,12 @@ $(window).ready(()=>{
       text-decoration: none;
       font-family: "Share", sans-serif;
       font-size: 2.5vh;
+    }
+    
+    #copyMe {
+      position: absolute;
+      top: -100vh;
+      left: -100vh;
     }`
   }).appendTo("head");
 });
@@ -179,13 +185,15 @@ $(window).contextmenu((e)=> {
       style: "display: flex; flex-flow: row wrap; justify-content: space-between;align-items: center;align-content: center;",
       html: "<span>Copy<span> <span style='opacity: .6;font-size: 80%'>Ctrl + C</span>",
       click: function() {
-        var copySuccess;
-        try {
-          copySuccess = document.execCommand("copy");
-        } catch(e) {
-          logError(e);
-        }
-        console.log(copySuccess);
+        $("<input>", {
+          id: "copyMe",
+          value: hasSelected
+        }).appendTo("body")
+        $("#copyMe").select();
+        document.execCommand("copy");
+        setTimeout(() => {
+          $("#copyMe").remove();
+        }, 300);
       }
     }).appendTo(".context-menu");
   }
