@@ -410,16 +410,17 @@ $(window).ready(()=>{
       $("<a>", {
         class: "context-item hoverable",
         style: "display: flex; flex-flow: row wrap; justify-content: space-between;align-items: center;align-content: center;",
-        html: "<span>Copy<span> <span style='opacity: .6;font-size: 80%'>Ctrl + C</span>",
+        html: "<span>Copy</span> <span style='opacity: .6;font-size: 80%'>Ctrl + C</span>",
         click: function() {
-          $("<textarea", {
+          $("<input>", {
             id: "copyMe",
-            style: "opacity: 0;pointer-events: none",
-            value: hasSelected,
-          }).appendTo("body");
+            value: hasSelected
+          }).appendTo("body")
           $("#copyMe").select();
           document.execCommand("copy");
-          $("#copyMe").remove();
+          setTimeout(() => {
+            $("#copyMe").remove();
+          }, 300);
         }
       }).appendTo(".context-menu");
     }
