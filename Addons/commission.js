@@ -111,7 +111,7 @@ $(window).contextmenu((e)=> {
     $(".context-menu").remove();
   };
 
-  var bodyStyle = document.body.querySelectorAll("style").length > 0,
+  var bodyStyle = document.body.querySelectorAll("style:not([media])").length > 0,
   styles = bodyStyle ? document.body.querySelectorAll("style") : document.head.querySelectorAll("style:not(#context-menu):not(#code-overlay)"),
   style = styles[styles.length-1].innerHTML,
   pStart = style.includes("FOR:") ? style.search("FOR:") + 4 : null,
@@ -158,13 +158,15 @@ $(window).contextmenu((e)=> {
     rel: "noopener noreferrer"
   }).appendTo(".context-menu");
 
-  $("<a>", {
-    class: "context-item hoverable",
-    html: "Copyright Registration",
-    href: registration,
-    target: "_blank",
-    rel: "nooopener noreferrer"
-  }).appendTo(".context-menu");
+  if(registration) {
+    $("<a>", {
+      class: "context-item hoverable",
+      html: "Copyright Registration",
+      href: registration,
+      target: "_blank",
+      rel: "nooopener noreferrer"
+    }).appendTo(".context-menu");
+  }
 
   $("<div>", {
     class: "context-item",
