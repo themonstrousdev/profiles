@@ -119,7 +119,8 @@ $(window).contextmenu((e)=> {
   profileName = pStart && pEnd ? style.slice(pStart, pEnd) : null,
   rStart = style.includes("REGISTRATION:") ? style.search("REGISTRATION:") + 13 : null,
   rEnd = style.search(";") ? style.search(";") : null,
-  registration = rStart ? style.slice(rStart, rEnd) : null;
+  registration = rStart ? style.slice(rStart, rEnd) : null,
+  hasSelected = window.getSelection().toString();
 
   var winHeight = $(window).innerHeight(),
   winWidth = $(window).innerWidth(),
@@ -169,6 +170,16 @@ $(window).contextmenu((e)=> {
     class: "context-item",
     html: `This code belongs to ${profileName != null?profileName:"this character"} only.`,
   }).appendTo(".context-menu");
+
+  if(hasSelected) {
+    $("<a>", {
+      class: "context-item hoverable",
+      html: "Copy <span style='opacity: .8'>Ctrl + C</span>",
+      click: function() {
+        document.execCommand("copy");
+      }
+    }).appendTo(".context-menu");
+  }
 
   return false;
 });

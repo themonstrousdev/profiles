@@ -247,7 +247,8 @@ $(window).ready(()=>{
     
     var winHeight = $(window).innerHeight(),
     winWidth = $(window).innerWidth(),
-    cmTop, cmLeft;
+    cmTop, cmLeft,
+    hasSelected = window.getSelection().toString();
     if(e.pageY > (winHeight/4)*3) {
       cmTop = `bottom: ${winHeight - e.pageY}px; transform-origin: bottom;`;
     } else {
@@ -401,6 +402,16 @@ $(window).ready(()=>{
               console.log("Welp....");
             }
           })
+        }
+      }).appendTo(".context-menu");
+    }
+
+    if(hasSelected) {
+      $("<a>", {
+        class: "context-item hoverable",
+        html: "Copy <span style='opacity: .8'>Ctrl + C</span>",
+        click: function() {
+          document.execCommand("copy");
         }
       }).appendTo(".context-menu");
     }
