@@ -179,15 +179,13 @@ $(window).contextmenu((e)=> {
       style: "display: flex; flex-flow: row wrap; justify-content: space-between;align-items: center;align-content: center;",
       html: "<span>Copy<span> <span style='opacity: .6;font-size: 80%'>Ctrl + C</span>",
       click: function() {
-        $("<textarea", {
-          id: "copyMe",
-          style: "opacity: 0;pointer-events: none",
-          value: hasSelected,
-        }).appendTo("body");
-        $("#copyMe").focus();
-        $("#copyMe").select();
-        document.execCommand("copy");
-        $("#copyMe").remove();
+        var copySuccess;
+        try {
+          copySuccess = document.execCommand("copy");
+        } catch(e) {
+          logError(e);
+        }
+        console.log(copySuccess);
       }
     }).appendTo(".context-menu");
   }
