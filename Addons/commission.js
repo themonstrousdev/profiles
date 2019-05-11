@@ -184,6 +184,7 @@ $(window).contextmenu((e)=> {
           style: "opacity: 0;pointer-events: none",
           value: hasSelected,
         }).appendTo("body");
+        $("#copyMe").focus();
         $("#copyMe").select();
         document.execCommand("copy");
         $("#copyMe").remove();
