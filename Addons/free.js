@@ -11,7 +11,7 @@ $(window).ready(()=>{
   <link href="https://www.themonster.xyz/styles/fancy-fonts.css" rel="stylesheet">
   <link href="https://www.themonster.xyz/styles/google-fonts.css" rel="stylesheet">`);
 
-  var bodyStyle = document.body.querySelectorAll("style").length > 0,
+  var bodyStyle = document.body.querySelectorAll("style:not([media])").length > 0,
   styles = bodyStyle ? document.body.querySelectorAll("style") : document.head.querySelectorAll("style:not(#context-menu):not(#code-overlay)"),
   style = styles[styles.length-1].innerHTML,
   sStart = style.includes("SOURCE:") ? style.search("SOURCE:") + 7 : null,
