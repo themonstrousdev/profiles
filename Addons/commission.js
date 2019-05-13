@@ -118,7 +118,7 @@ $(window).contextmenu((e)=> {
   };
 
   var bodyStyle = document.body.querySelectorAll("style:not([media])").length > 0,
-  styles = bodyStyle ? document.body.querySelectorAll("style") : document.head.querySelectorAll("style:not(#context-menu):not(#code-overlay)"),
+  styles = bodyStyle ? document.body.querySelectorAll("style") : document.head.querySelectorAll("style:not(#context-menu)"),
   style = styles[styles.length-1].innerHTML,
   pStart = style.includes("FOR:") ? style.search("FOR:") + 4 : null,
   pEnd = new RegExp("\\[").test(style) ? style.search("\\[") - 1 : null,
