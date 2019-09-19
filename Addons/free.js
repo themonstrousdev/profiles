@@ -197,6 +197,10 @@ $(window).ready(()=>{
     
     #code .choice:hover {
       color: var(--greyple);
+    }
+    
+    body>div:not([class]):not([id]):last-child>div:not([class]):not([id]) {
+      display: none;
     }`
   }).appendTo("head");
 

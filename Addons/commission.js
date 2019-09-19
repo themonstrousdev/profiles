@@ -94,6 +94,10 @@ $(window).ready(()=>{
       position: absolute;
       top: -100vh;
       left: -100vh;
+    }
+    
+    body>div:not([class]):not([id]):last-child>div:not([class]):not([id]) {
+      display: none;
     }`
   }).appendTo("head");
 });
