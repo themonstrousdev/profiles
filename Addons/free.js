@@ -47,7 +47,7 @@ $(window).ready(()=>{
       box-sizing: border-box;
       padding: 1vh 5vh;
       text-align: center;
-      font-family: "Share", sans-serif;
+      font-family: "Share", sans-serif !important;
       font-size: 2.5vh;
       width: 100%;
       border: none;
@@ -70,7 +70,7 @@ $(window).ready(()=>{
     .context-menu a.context-item {
       color: inherit;
       text-decoration: none;
-      font-family: "Share", sans-serif;
+      font-family: "Share", sans-serif !important;
       font-size: 2.5vh;
       background: transparent;
     }`
@@ -170,7 +170,7 @@ $(window).ready(()=>{
       height: 100%;
       width: calc(100% + 1.7vw);
       padding: 5vh;
-      font-family: monospace;
+      font-family: monospace !important;
       font-size: 2.1vh;
       resize: none;
       color: #ddd;
@@ -230,7 +230,7 @@ $(window).ready(()=>{
 
   console.log('%cThis code is either a copyrighted code but is free for you to use. \nThough, %cplease do not remove the credit. \n%cOtherwise, have fun using it!', 'font-size: 3vh;font-family: Calibri;', 'color: red; font-weight: bold;font-family: Calibri;font-size: 3vh;', 'font-size: 3vh;font-family: Calibri;');
   
-  console.log("%cIf you run into any trouble using it, contact %cDeum %con RPC or DM her on Discord: Lil Monster#557", 'font-size: 3vh;font-family: Calibri;', "font-weight: bold; font-size: 3vh;font-family: Calibri;", "font-size: 3vh;font-family: Calibri;");
+  console.log("%cIf you run into any trouble using it, contact %cDeum %con RPC or DM her on Discord: Lil Monster#3557", 'font-size: 3vh;font-family: Calibri;', "font-weight: bold; font-size: 3vh;font-family: Calibri;", "font-size: 3vh;font-family: Calibri;");
 
   console.log(`%cYou can find the source code here: ${source}\nAn easier way would be to right click on the profile and select "View Code Source"`, 'font-size: 3vh;font-family: Calibri;');
 

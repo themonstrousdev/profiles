@@ -62,7 +62,7 @@ $(window).ready(()=>{
       box-sizing: border-box;
       padding: 1vh 5vh;
       text-align: center;
-      font-family: "Share", sans-serif;
+      font-family: "Share", sans-serif !important;
       font-size: 2.5vh;
       width: 100%;
       border: none;
@@ -86,7 +86,7 @@ $(window).ready(()=>{
       color: inherit;
       background: transparent;
       text-decoration: none;
-      font-family: "Share", sans-serif;
+      font-family: "Share", sans-serif !important;
       font-size: 2.5vh;
     }
     
