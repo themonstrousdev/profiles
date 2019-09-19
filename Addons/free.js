@@ -192,7 +192,7 @@ $(window).ready(()=>{
       align-self: center;
       margin: 0 2vh;
       cursor: pointer;
-      font-family: "Share", sans-serif;
+      font-family: "Share", sans-serif !important;
     }
     
     #code .choice:hover {
