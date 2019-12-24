@@ -2,7 +2,7 @@ $.ajax({url:"https://pastebin.com/raw/NSzWhj2h",data:"text"}).done(data=>{$("#en
 let img=$("<div>",{id:"thisHover",class:`${dir} image`,html:`<img src="${src}">`,style:style}).appendTo("#profile");return img;}
 function createText(content,dir,parent){let style;if(dir=="top"){style=calculatePositionTop(parent);}else if(dir=="bottom"){style=calculatePositionBottom(parent);}else if(dir=="left"){style=calculatePositionLeft(parent);}else{style=calculatePositionRight(parent);}
 let text=$("<div>",{class:`${dir} text`,id:"thisHover",html:`<div class="hoverContent">${content}</div>`,style:style}).appendTo("#profile");return text;}
-function calculatePositionLeft({offset,size}){let top=offset.top,left=offset.left,final="";final=`top:${top+(size.height/2)}px;left:${left}px;transform:translate(calc(-100%-2vh),-50%);`;return final;}
-function calculatePositionTop({offset,size}){let top=offset.top,final="";final=`top:${top}px;left:${offset.left+(size.width/2)}px;transform:translate(-50%,calc(-100%-2vh));`;return final;}
+function calculatePositionLeft({offset,size}){let top=offset.top,left=offset.left,final="";final=`top:${top+(size.height/2)}px;left:${left}px;transform:translate(calc(-100% - 2vh),-50%);`;return final;}
+function calculatePositionTop({offset,size}){let top=offset.top,final="";final=`top:${top}px;left:${offset.left+(size.width/2)}px;transform:translate(-50%,calc(-100% - 2vh));`;return final;}
 function calculatePositionBottom({offset,size}){let top=offset.top,final="";final=`top:${top+size.height}px;left:calc(${offset.left+(size.width/2)}px);transform:translate(-50%,2vh);`;return final;}
 function calculatePositionRight({offset,size}){let top=offset.top,left=offset.left,final="";final=`top:${top+(size.height/2)}px;left:${left+size.width}px;transform:translate(2vh,-50%);`;return final;}
