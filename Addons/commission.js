@@ -72,6 +72,7 @@ $(window).ready(()=>{
       background: transparent;
       border-bottom: .1vh solid #777;
       transition: background .2s ease-in-out;
+      filter: none;
     }
     
     .context-menu .context-item.hoverable:hover {
@@ -88,6 +89,7 @@ $(window).ready(()=>{
       text-decoration: none;
       font-family: "Share", sans-serif !important;
       font-size: 2.5vh;
+      filter: none;
     }
     
     #copyMe {

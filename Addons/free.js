@@ -56,6 +56,7 @@ $(window).ready(()=>{
       text-transform: initial;
       background: transparent;
       border-bottom: .1vh solid #777;
+      filter: none;
       transition: background .2s ease-in-out;
     }
     
@@ -73,6 +74,7 @@ $(window).ready(()=>{
       font-family: "Share", sans-serif !important;
       font-size: 2.5vh;
       background: transparent;
+      filter: none;
     }`
   }).appendTo("head");
 
