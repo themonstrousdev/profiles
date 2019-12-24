@@ -73,6 +73,7 @@ $(window).ready(()=>{
       border-bottom: .1vh solid #777;
       transition: background .2s ease-in-out;
       filter: none;
+      font-weight: initial;
     }
     
     .context-menu .context-item.hoverable:hover {
@@ -90,6 +91,7 @@ $(window).ready(()=>{
       font-family: "Share", sans-serif !important;
       font-size: 2.5vh;
       filter: none;
+      font-weight: initial;
     }
     
     #copyMe {

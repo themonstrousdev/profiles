@@ -58,6 +58,7 @@ $(window).ready(()=>{
       border-bottom: .1vh solid #777;
       filter: none;
       transition: background .2s ease-in-out;
+      font-weight: initial;
     }
     
     .context-menu .context-item.hoverable:hover {
@@ -75,6 +76,7 @@ $(window).ready(()=>{
       font-size: 2.5vh;
       background: transparent;
       filter: none;
+      font-weight: initial;
     }`
   }).appendTo("head");
 
