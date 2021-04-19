@@ -8,8 +8,8 @@ $(document).keydown(function (event) {
 
 $(window).ready(()=>{
   $("head").append(`
-  <link href="https://www.themonster.xyz/styles/fancy-fonts.css" rel="stylesheet">
-  <link href="https://www.themonster.xyz/styles/google-fonts.css" rel="stylesheet">`);
+  <link href="https://themonstrousdev.github.io/styles/fancy-fonts.css" rel="stylesheet">
+  <link href="https://themonstrousdev.github.io/styles/google-fonts.css" rel="stylesheet">`);
 
   var bodyStyle = document.body.querySelectorAll("style:not([media])").length > 0,
   styles = bodyStyle ? document.body.querySelectorAll("style") : document.head.querySelectorAll("style:not(#context-menu):not(#code-overlay)"),
@@ -66,7 +66,7 @@ $(window).ready(()=>{
     }
     
     .context-menu .context-item.coder {
-      background: url(https://www.themonster.xyz/assets/main-logo.png) .5vw center/auto 60% no-repeat;
+      background: url(https://themonstrousdev.github.io/assets/main-logo.png) .5vw center/auto 60% no-repeat;
     }
     
     .context-menu a.context-item {
@@ -98,7 +98,7 @@ $(window).ready(()=>{
       height: 100%;
       background: white;
       mask: url(../assets/concrete-texture.png);
-      -webkit-mask: url(https://www.themonster.xyz/assets/concrete-texture.png);
+      -webkit-mask: url(https://themonstrousdev.github.io/assets/concrete-texture.png);
       opacity: .5;
     }
 
@@ -232,7 +232,7 @@ $(window).ready(()=>{
    
   console.image = renderImage;
   
-  console.image("https://www.themonster.xyz/assets/main-logo.png");
+  console.image("themonstrousdev.github.io/assets/main-logo.png");
 
   console.log('%cHi, there!', 'color: green; text-shadow: 2px 0px #000, 0px -2px #000, -2px 0px #000, 0px 2px #000;font-size: 7vh; font-weight: 600;font-family:Calibri');
 
@@ -284,7 +284,7 @@ $(window).ready(()=>{
     
     $("<a>", {
       class: "context-item hoverable",
-      html: "License : <img src='https://www.themonster.xyz/assets/creativecommons.svg' style='height: 2.5vh; width: auto;' alt='Creative Commons'> BY-NC-ND",
+      html: "License : <img src='https://themonstrousdev.github.io/assets/creativecommons.svg' style='height: 2.5vh; width: auto;' alt='Creative Commons'> BY-NC-ND",
       href: "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode",
       target: "_blank",
       rel: "noopener noreferrer"
