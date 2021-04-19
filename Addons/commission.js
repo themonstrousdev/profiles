@@ -23,18 +23,18 @@ $(window).ready(()=>{
    
   console.image = renderImage;
   
-  console.image("https://www.themonster.xyz/assets/main-logo.png");
+  console.image("https://themonstrousdev.github.io/assets/main-logo.png");
   
   console.log('%cSTOP!', 'color: red; text-shadow: 2px 0px #000, 0px -2px #000, -2px 0px #000, 0px 2px #000;font-size: 7vh; font-weight: 600;font-family:Calibri');
   
   console.log('%cThis code is either paid for, copyrighted, or both! In an event that you find this, you are already trying to bypass that. Please turn back now and simply ask The Monster (aka Elle) for any question regarding this profile.', 'font-size: 3vh;font-family: Calibri;');
   
-  console.log('%cIf you want to know more, go to http://www.themonster.xyz', 'font-size: 3vh;font-family: Calibri;');
+  console.log('%cIf you want to know more, go to http://themonstrousdev.github.io', 'font-size: 3vh;font-family: Calibri;');
  
 
   $("head").append(`
-  <link href="https://www.themonster.xyz/styles/fancy-fonts.css" rel="stylesheet">
-  <link href="https://www.themonster.xyz/styles/google-fonts.css" rel="stylesheet">`);
+  <link href="https://themonstrousdev.github.io/styles/fancy-fonts.css" rel="stylesheet">
+  <link href="https://themonstrousdev.github.io/styles/google-fonts.css" rel="stylesheet">`);
 
   $("<style>", {
     id: "context-menu",
@@ -81,7 +81,7 @@ $(window).ready(()=>{
     }
     
     .context-menu .context-item.coder {
-      background: url(https://www.themonster.xyz/assets/main-logo.png) .5vw center/auto 60% no-repeat;
+      background: url(https://themonstrousdev.github.io/assets/main-logo.png) .5vw center/auto 60% no-repeat;
     }
     
     .context-menu a.context-item {
@@ -159,14 +159,14 @@ $(window).contextmenu((e)=> {
   $("<a>", {
     class: "context-item coder hoverable",
     html: "&copy; The Monster",
-    href: "https://roleplay.chat/profile.php?user=Deum",
+    href: "https://roleplay.chat/profile.php?user=Kingdom+Corp",
     target: "_blank",
     rel: "noopener noreferrer"
   }).appendTo(".context-menu");
 
   $("<a>", {
     class: "context-item hoverable",
-    html: "License : <img src='https://www.themonster.xyz/assets/creativecommons.svg' style='height: 2.5vh; width: auto;' alt='Creative Commons'> BY-NC-ND",
+    html: "License : <img src='https://themonstrousdev.github.io/assets/creativecommons.svg' style='height: 2.5vh; width: auto;' alt='Creative Commons'> BY-NC-ND",
     href: "https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode",
     target: "_blank",
     rel: "noopener noreferrer"
