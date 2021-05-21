@@ -33,8 +33,8 @@ $(window).ready(()=>{
  
 
   $("head").append(`
-  <link href="https://www.themonster.xyz/styles/fancy-fonts.css" rel="stylesheet">
-  <link href="https://www.themonster.xyz/styles/google-fonts.css" rel="stylesheet">`);
+  <link href="https://themonstrousdev.github.io/styles/fancy-fonts.css" rel="stylesheet">
+  <link href="https://themonstrousdev.github.io/styles/google-fonts.css" rel="stylesheet">`);
 
   $("<style>", {
     id: "context-menu",
