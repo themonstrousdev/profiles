@@ -1,0 +1,359 @@
+/*
+!! IMPORTANT !!
+===== DO NOT REMOVE THIS WHOLE SECTION =====
+AUTHOR: Kingdom Corp (Elle & Co.)
+FOR: Odo [RPC PROFILE]
+LANGUAGE: CSS/HTML/JS
+########------########-----########-----##############--------########-----------###################
+########-----########------########-----################------########---------#######################
+########----########-------########-----########-#######------########--------#######----------########
+########---########--------########-----########--#######-----########-------#######------------########
+########--########---------########-----########--########----########------#######
+########-########----------########-----########---#######----########------#######
+################-----------########-----########---########---########------#######
+########-########----------########-----########----#######---########------#######--------#############
+########--########---------########-----########----########--########------#######--------#############
+########---########--------########-----########-----#######--########-------#######-------------#######
+########----########-------########-----########------#######-########--------#######------------######
+########-----########------########-----########------################---------#######################
+########------########-----########-----########-------###############-----------###################
+
+============================================================================================================
+THIS IS THE EDITABLE PORTION OF YOUR CODE. PLEASE PLACE THIS AT THE TOP OF YOUR <STYLE> BOX FOLLOWED BY THE CONTENTS OF STYLE.CSS.
+EDIT ANY OF THE VARIABLES FOUND BELOW TO SAFELY CHANGE THE LOOK OF YOUR PROFILE. ALL CUSTOM CODE SHOULD BE ADDED AT THE BOTTOM OF STYLE.CSS
+
+
+
+Thank you for choosing Kingdom Corp.!
+Below you will find ':root' which is all the variables available for your profile. They are sectioned off
+by type so you can easily identify which one edits your profile. They are also named as to how they are used
+to further ease of use. Your fonts are all imported from Google Fonts or from our collection. If you wish
+to change any font, you will not need to link them again as I have included it in your profile in advance. Simply
+go to https://fonts.google.com/ or https://themonstrousdev.github.io/fonts , choose the font you want to use, and change
+the font name in ':root' as you see fit.
+
+
+If you enjoy using our layouts and your experience working with us, I hope you can recommend us to your friends!
+=============================================================================================================
+*/
+
+html,
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background) center/cover no-repeat;
+  font-family: var(--main-font);
+  color: var(--main-color);
+  font-size: var(--normal-text-size);
+}
+
+#veil {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(309deg, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0.432)70%, rgba(237, 252, 174, 0.342)100%);
+  height: 100vh;
+  width: 100vw;
+}
+
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  filter: blur(5rem);
+}
+
+.ray {
+  position: absolute;
+  top: 15%;
+  bottom: 0;
+  left: 10%;
+  clip-path: polygon(0 0, 30% 100%, 100% 100%);
+  background: linear-gradient(-309deg, rgba(244, 255, 202, 0.342) 0%, rgba(236, 252, 174, 0.137) 100%);
+  width: 80vw;
+}
+
+#main {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 30vw;
+  background: var(--main-image) right bottom/contain no-repeat;
+  filter: drop-shadow(.5rem .5rem 1rem rgb(0, 0, 0));
+}
+
+#main:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: '';
+  background: linear-gradient(-260deg, rgba(244, 255, 202, 0.2) 0%, rgba(0, 0, 0, 0.3) 70%);
+  mask: var(--main-image) right bottom/contain no-repeat;
+}
+
+#realFace {
+  position: absolute;
+  top: 30%;
+  left: 3vw;
+  height: 15vw;
+  width: 15vw;
+  background: var(--real-face) center/cover no-repeat;
+  border: 1rem solid rgba(0,0,0,0.5);
+  transition: all .5s;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 2;
+}
+
+#main:hover #realFace {
+  opacity: 1;
+}
+
+#pixie {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#box {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-32%);
+  height: 60vh;
+  width: 50vw;
+  background: var(--main-box-color);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+#name {
+  position: absolute;
+  left: 11vw;
+  bottom: 5vh;
+  font-family: var(--name-font);
+  font-weight: bold;
+  font-size: var(--name-text-size);
+  color: transparent;
+  background: var(--name-color);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-family: var(--header-font);
+  font-size: 2rem;
+  color: transparent;
+  background: var(--header-color);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0.01rem rgba(0, 0, 0, 0.5);
+}
+
+#tabs {
+  position: absolute;
+  bottom: 6vh;
+  left: 39.5vw;
+  height: 5vh;
+  width: 20vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#tabs label {
+  position: relative;
+  height: 5vh;
+  width: 5vh;
+  margin: auto .5rem auto auto;
+  background: var(--badge) center/auto 100% no-repeat;
+  cursor: pointer;
+  transition: all 0.3s;
+  filter: drop-shadow(0 .2rem 0 black)
+}
+
+#tabs label:not(.active):hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 .3rem .2rem black)
+}
+
+#tabs label:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  mask: var(--badge) center/auto 100% no-repeat;
+  background: radial-gradient(transparent, black 50%);
+  opacity: 0.5;
+}
+
+#tabs label.active {
+  transform: scale(1.1);
+  filter: drop-shadow(0 .3rem .2rem black)
+}
+
+input[type="radio"] {
+  opacity: 0;
+}
+
+input[type="radio"]:checked+.scroller {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.scroller {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 2rem;
+  padding: 3rem;
+  overflow-x: hidden;
+  overflow: auto;
+  opacity: 0;
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  opacity: 0;
+}
+
+.friends {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+.friend {
+  position: relative;
+  height: 15vh;
+  width: 15vh;
+  background: var(--friend-badge) center/cover no-repeat;
+  mask: var(--friend-badge) center/cover no-repeat;
+  border: 0.2rem solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.friend-container {
+  filter: drop-shadow(0 0 black);
+}
+
+.description {
+  position: absolute;
+  min-height: 10vh;
+  min-width: 10vw;
+  border: solid .5rem black;
+  background: var(--tooltip-background) center/cover no-repeat;
+}
+
+.description-text {
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: 2;
+  padding: 1rem;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--friend-name-color);
+  font-family: var(--friend-name-font);
+  text-align: center;
+}
+
+.description::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+th, td {
+  width: 25%;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+th {
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+td {
+  padding-bottom: 2rem;
+}
+
+b {
+  color: var(--bold-color);
+}
+
+i {
+  color: var(--italics-color);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+
+#code {
+  position: absolute;
+  bottom: 5vh;
+  right: 5vh;
+  height: 5vh;
+  width: 5vh;
+  background: url(https://i.imgur.com/BvyOr3E.png) no-repeat center;
+  background-size: contain;
+  opacity: 0.5;
+  transition: 1s ease-in-out;
+}
+
+#code:hover {
+  opacity: 1;
+}
+/*
+=======================================================================================================
+*********** TROUBLESHOOTING: IF YOU NEED ANY HELP, MESSAGE ME ON DISCORD: monstrum ***********
+=======================================================================================================
+*/
