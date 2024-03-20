@@ -305,6 +305,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 1rem 0;
+  font-size: var(--normal-text-size);
 }
 
 th, td {
@@ -315,7 +316,6 @@ th, td {
 
 th {
   background: rgba(0, 0, 0, 0.5);
-  font-size: 1.2rem;
   font-weight: bold;
 }
 
