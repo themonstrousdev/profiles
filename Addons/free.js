@@ -232,13 +232,13 @@ $(window).ready(()=>{
    
   console.image = renderImage;
   
-  console.image("themonstrousdev.github.io/assets/main-logo.png");
+  console.image("https://i.imgur.com/os3SY7T.png");
 
   console.log('%cHi, there!', 'color: green; text-shadow: 2px 0px #000, 0px -2px #000, -2px 0px #000, 0px 2px #000;font-size: 7vh; font-weight: 600;font-family:Calibri');
 
   console.log('%cThis code is either a copyrighted code but is free for you to use. \nThough, %cplease do not remove the credit. \n%cOtherwise, have fun using it!', 'font-size: 3vh;font-family: Calibri;', 'color: red; font-weight: bold;font-family: Calibri;font-size: 3vh;', 'font-size: 3vh;font-family: Calibri;');
   
-  console.log("%cIf you run into any trouble using it, contact %cDeum %con RPC or DM her on Discord: Lil Monster#3557", 'font-size: 3vh;font-family: Calibri;', "font-weight: bold; font-size: 3vh;font-family: Calibri;", "font-size: 3vh;font-family: Calibri;");
+  console.log("%cIf you run into any trouble using it, contact %cDeum %con RPC or DM her on Discord: Monstrum#3557", 'font-size: 3vh;font-family: Calibri;', "font-weight: bold; font-size: 3vh;font-family: Calibri;", "font-size: 3vh;font-family: Calibri;");
 
   console.log(`%cYou can find the source code here: ${source}\nAn easier way would be to right click on the profile and select "View Code Source"`, 'font-size: 3vh;font-family: Calibri;');
 
@@ -276,8 +276,8 @@ $(window).ready(()=>{
   
     $("<a>", {
       class: "context-item coder hoverable",
-      html: "&copy; The Monster",
-      href: "https://roleplay.chat/profile.php?user=Deum",
+      html: "&copy; Kingdom Corp",
+      href: "https://roleplay.chat/profile.php?user=Kingdom+Corp",
       target: "_blank",
       rel: "noopener noreferrer"
     }).appendTo(".context-menu");
